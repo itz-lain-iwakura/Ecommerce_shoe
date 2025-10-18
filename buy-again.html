@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 70px 1fr 60px;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #0078d7;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #f3f3f3;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #222;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #0078d7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header>My Website</header>
+    
+    <aside>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <h2>Welcome!</h2>
+      <p>This is a simple responsive webpage layout using CSS Grid.</p>
+      <p>You can adjust the grid-template-areas to create different layouts.</p>
+    </main>
+
+    <footer>© 2025 My Website</footer>
+  </div>
+
+</body>
+</html>
